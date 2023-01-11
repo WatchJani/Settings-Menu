@@ -14,10 +14,10 @@ public class Main {
 
         //New.setBackground(Color.RED);
         //New.setLayout(new FlowLayout(FlowLayout.CENTER));
-        SETTING.setPreferredSize(new Dimension(500, 530));
+        SETTING.setPreferredSize(new Dimension(500, 400));
         //buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 
-        //SETTING.setBackground(Color.gray);
+        SETTING.setBackground(Color.gray);
         Container.setBorder(new EmptyBorder(60, 0, 0, 0)); //EmptyBorder(int top, int left,
 
 
@@ -48,7 +48,7 @@ public class Main {
         //size of the playing field
         JPanel PLAYER_FIELD = new JPanel();
         PLAYER_FIELD.setLayout(new BoxLayout(PLAYER_FIELD, BoxLayout.Y_AXIS));
-        PLAYER_FIELD.setPreferredSize(new Dimension(500, 50));
+        PLAYER_FIELD.setPreferredSize(new Dimension(500, 80));
         //PLAYER_FIELD.setBackground(Color.RED);
         JLabel SIZE_OF_THE_PLAYING_FIELD_LABEL = new JLabel("Choose a SIZE OF THE PLAYING FIELD");
         PLAYER_FIELD.add(SIZE_OF_THE_PLAYING_FIELD_LABEL);
@@ -73,31 +73,48 @@ public class Main {
 
         //number of moves
         JPanel NUMBER_OF_MOVES = new JPanel();
-        NUMBER_OF_MOVES.setPreferredSize(new Dimension(500, 100));
-        NUMBER_OF_MOVES.setBackground(Color.BLUE);
-        JLabel NUMBER_OF_MOVES_LABEL = new JLabel("Choose a NUMBER OG MOVES");
+        NUMBER_OF_MOVES.setLayout(new BoxLayout(NUMBER_OF_MOVES, BoxLayout.Y_AXIS));
+        NUMBER_OF_MOVES.setPreferredSize(new Dimension(500, 80));
+        //NUMBER_OF_MOVES.setBackground(Color.BLUE);
+        JLabel NUMBER_OF_MOVES_LABEL = new JLabel("Choose a NUMBER OF MOVES");
         NUMBER_OF_MOVES.add(NUMBER_OF_MOVES_LABEL);
 
+        JPanel NUMBER_OF_MOVES_PANEL = new JPanel();
 
+        JTextField NUMBER_OG_MOVES_FIELD = new JTextField(8);
+
+        NUMBER_OF_MOVES_PANEL.add(NUMBER_OG_MOVES_FIELD);
+
+        NUMBER_OF_MOVES_PANEL.setAlignmentX(Component.LEFT_ALIGNMENT);
+        NUMBER_OF_MOVES.add(NUMBER_OF_MOVES_PANEL);
 
 
         //===========================================================================
 
-
         //target value setting
         JPanel TARGET_VALUE_SETTING = new JPanel();
-        TARGET_VALUE_SETTING.setPreferredSize(new Dimension(500, 100));
-        TARGET_VALUE_SETTING.setBackground(Color.PINK);
+        TARGET_VALUE_SETTING.setLayout(new BoxLayout(TARGET_VALUE_SETTING, BoxLayout.Y_AXIS));
+        TARGET_VALUE_SETTING.setPreferredSize(new Dimension(500, 80));
+        //TARGET_VALUE_SETTING.setBackground(Color.PINK);
         JLabel TARGET_VALUE_SETTING_LABEL = new JLabel("Choose a TARGET VALUE SETTING");
         TARGET_VALUE_SETTING.add(TARGET_VALUE_SETTING_LABEL);
+
+
+        JPanel TARGET_VALUE_SETTING_PANEL = new JPanel();
+
+        JTextField TARGET_VALUE_SETTING_FIELD = new JTextField(8);
+        TARGET_VALUE_SETTING_PANEL.add(TARGET_VALUE_SETTING_FIELD);
+
+        TARGET_VALUE_SETTING_PANEL.setAlignmentX(Component.LEFT_ALIGNMENT);
+        TARGET_VALUE_SETTING.add(TARGET_VALUE_SETTING_PANEL);
 
         //===========================================================================
 
 
         //target value setting
         JPanel BUTTONS = new JPanel();
-        BUTTONS.setPreferredSize(new Dimension(500, 100));
-        BUTTONS.setBackground(Color.GREEN);
+        BUTTONS.setPreferredSize(new Dimension(500, 80));
+        //BUTTONS.setBackground(Color.GREEN);
         JButton BACK = new JButton("BACK");
         JButton SAVE = new JButton("SAVE");
         BUTTONS.add(BACK);
